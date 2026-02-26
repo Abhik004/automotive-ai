@@ -1,18 +1,13 @@
-# 🚗 AutoVision AI — 3D Car Configurator
+# 🚗 AutoVision AI - 3D Car Configurator
 
-> An interactive automotive showcase built with **Next.js**, **Three.js**, and **Gemini AI** — letting users customize a 3D car model in real-time and receive AI-generated configuration presets based on themes.
-
-![AutoVision AI](https://img.shields.io/badge/Built%20With-Next.js%2015-black?style=flat-square&logo=next.js)
-![Three.js](https://img.shields.io/badge/3D%20Engine-Three.js-black?style=flat-square&logo=three.js)
-![Gemini AI](https://img.shields.io/badge/AI-Gemini%202.5%20Flash-blue?style=flat-square&logo=google)
-![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue?style=flat-square&logo=typescript)
+> An interactive automotive showcase built with **Next.js**, **Three.js**, and **Gemini AI** ; letting users customize a 3D car model in real-time and receive AI-generated configuration presets based on themes.
 
 ---
 
 ## ✨ Features Implemented
 
 ### 🎮 Interactive 3D Car Viewer
-- Real-time 3D car rendered entirely with **Three.js geometry** — no external model files required
+- Real-time 3D car rendered entirely with **Three.js geometry** , no external model files required
 - **Drag to orbit** the car with mouse or touch input
 - **Scroll to zoom** in and out
 - **Auto-rotate** when idle, pauses on interaction and resumes after 2 seconds
@@ -21,28 +16,28 @@
 
 ### 🎨 Body Color Customization
 - 10 preset paint colors including Obsidian, Crimson, Cobalt, Pearl, Emerald, Gold, Violet, Slate, Burnt Orange, and Cyan
-- All body panels update **instantly** in real-time — hood, cabin, bumpers, doors, mirrors
+- All body panels update **instantly** in real-time : hood, cabin, bumpers, doors, mirrors
 - Color changes also reflect in the ambient ground ring for full scene immersion
 
 ### 🔩 Wheel Style Switching
 - 3 distinct wheel designs built with Three.js geometry:
-  - **Standard** — classic 5-spoke alloy
-  - **Sport** — twin-spoke with accent color highlights
-  - **Premium** — turbine/mesh blade with gold metallic finish
+  - **Standard** : classic 5-spoke alloy
+  - **Sport** : twin-spoke with accent color highlights
+  - **Premium** : turbine/mesh blade with gold metallic finish
 - Wheels switch live with a single click, no reload needed
 
 ### 🪣 Paint Finish Selection
 - 3 finish types that change the material's physical properties:
-  - **Matte** — low roughness, non-reflective surface
-  - **Gloss** — high smoothness, mirror-like sheen
-  - **Metallic** — full metalness with mid roughness for a chrome-like effect
+  - **Matte** : low roughness, non-reflective surface
+  - **Gloss** : high smoothness, mirror-like sheen
+  - **Metallic** : full metalness with mid roughness for a chrome-like effect
 - Uses **PBR (Physically Based Rendering)** via Three.js `MeshStandardMaterial`
 
 ### 💡 Dynamic Lighting
-- **Key light** — warm directional light simulating a studio spotlight
-- **Rim light** — white point light behind the car for edge definition
-- **Fill light** — cool blue point light for depth and contrast
-- **Ground light** — subtle upward light for underbody ambient fill
+- **Key light** : warm directional light simulating a studio spotlight
+- **Rim light** : white point light behind the car for edge definition
+- **Fill light** : cool blue point light for depth and contrast
+- **Ground light** : subtle upward light for underbody ambient fill
 
 ### 🤖 Gemini AI Suggestion Panel
 - Type any theme or pick from quick-select chips
@@ -52,9 +47,9 @@
 - Staggered card animations on load for a polished feel
 
 ### 🖥️ UI / UX
-- Dark luxury automotive aesthetic — carbon black with gold accents
+- Dark luxury automotive aesthetic , carbon black with gold accents
 - **Rajdhani** display font paired with **DM Sans** for body text
-- Tabbed side panel — switch between AI Suggest and Manual controls
+- Tabbed side panel : switch between AI Suggest and Manual controls
 - Active preset shown in the header with live color swatch
 - Fully responsive layout, works on desktop and tablet
 
@@ -68,34 +63,17 @@ The AI component uses **Google Gemini 2.5 Flash** via the `@google/generative-ai
 
 1. The theme is sent from the frontend to a **Next.js API Route** (`/api/suggest`)
 2. The server calls Gemini with a structured prompt asking for exactly 5 car configuration presets
-3. Gemini returns a **JSON array** of presets — each containing color hex, wheel style index, paint finish, accent color, and a description
+3. Gemini returns a **JSON array** of presets - each containing color hex, wheel style index, paint finish, accent color, and a description
 4. The frontend parses and renders the presets as interactive cards
 5. Clicking any card **instantly applies** all its values to the live 3D car
 
 ### Why Gemini 2.5 Flash
 
-- Fast response time — ideal for real-time interactive experiences
-- Strong structured JSON output — reliable parsing without schema enforcement
+- Fast response time : ideal for real-time interactive experiences
+- Strong structured JSON output : reliable parsing without schema enforcement
 - Free tier available via [Google AI Studio](https://aistudio.google.com)
 
-### Example AI Output
 
-For the theme **"Stealth"**, Gemini might return:
-
-```json
-[
-  {
-    "name": "Shadow Operative",
-    "color": "#1A1A1A",
-    "colorName": "Void Black",
-    "wheels": 1,
-    "wheelName": "Blacked-Out Sport",
-    "finish": "matte",
-    "description": "Disappear into the night — zero reflection, zero trace.",
-    "accentColor": "#2A2A2A"
-  }
-]
-```
 
 ### Prompt Design
 
@@ -114,7 +92,7 @@ A cleanup step strips any accidental markdown fences before `JSON.parse()`.
 ### Prerequisites
 
 - **Node.js** 18 or higher
-- A **Gemini API key** — get one free at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+- A **Gemini API key** get one free at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
 
 ### Installation
 
@@ -164,7 +142,7 @@ npm start
 |---|---|
 | Rotate the car | Click and drag anywhere on the 3D view |
 | Zoom in / out | Scroll the mouse wheel |
-| Auto-rotate | Just wait — it resumes automatically after 2 seconds |
+| Auto-rotate | Just wait, it resumes automatically after 2 seconds |
 
 ### Manual Controls (Right Panel → "Manual" tab)
 
@@ -178,7 +156,7 @@ npm start
 
 | Step | Action |
 |---|---|
-| 1 | Click a quick-theme chip — **Sporty, Luxury, Stealth, Futuristic, Vintage, Off-Road** |
+| 1 | Click a quick-theme chip : **Sporty, Luxury, Stealth, Futuristic, Vintage, Off-Road** |
 | 2 | Or type your own theme in the text input |
 | 3 | Press **Enter** or click the **→** button |
 | 4 | Wait ~2 seconds for Gemini to generate 5 presets |
@@ -225,10 +203,6 @@ automotive-ai/
 
 ---
 
-## 📄 License
-
-MIT — free to use and modify.
-
 ---
 
-<p align="center">Built for the Metadome Solutions Engineer Evaluation · 2024</p>
+<p align="center">Built for the Metadome Solutions Engineer Evaluation · 2026</p>
